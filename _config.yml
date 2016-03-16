@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            ISPIRED
+tagline:          ']'
+description:      'Brook Zero is the man.'
+url:              http://hyde.getpoole.com
+
+author:
+  name:           Brook Zero
+  url:            http://brookzero.com
+
+paginate:         99
+
+# Custom vars
+version:          1
+
+github:
+  repo:           https://github.com/brookzero
