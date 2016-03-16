@@ -5,9 +5,16 @@ pygments:         true
 permalink:        pretty
 
 # Setup
+# Dependencies
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Setup
 title:            泽洛
 tagline:          ']'
-description:      'A.K.A Brook Zero, 一枚长脸怪.'
+description:      'A.K.A Brook Zero.'
 url:              http://hyde.getpoole.com
 
 author:
