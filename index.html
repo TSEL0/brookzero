@@ -21,17 +21,17 @@ title: Home
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">👈以前的</a>
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">翻到前一页</a>
   {% else %}
-    <span class="pagination-item older">👈以前的</span>
+    <span class="pagination-item older">没有前一页</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">以后的👉</a>
+      <a class="pagination-item newer" href="/">翻过这一页</a>
     {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">以后的👉</a>
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">翻过这一页</a>
     {% endif %}
   {% else %}
-    <span class="pagination-item newer">以后的👉</span>
+    <span class="pagination-item newer">:)</span>
   {% endif %}
 </div>

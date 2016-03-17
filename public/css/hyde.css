@@ -32,7 +32,7 @@
  */
 
 html {
-  font-family: "华文黑体", Helvetica, Arial, sans-serif;
+  font-family: "Georgia", Helvetica, Arial, sans-serif;
 }
 @media (min-width: 48rem) {
   html {
@@ -79,7 +79,7 @@ html {
 .sidebar-about h1 {
   color: #fff;
   margin-top: 0;
-  font-family: "华文黑体", serif;
+  font-family: "Georgia", serif;
   font-size: 3.25rem;
 }
 

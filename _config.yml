@@ -21,7 +21,7 @@ author:
   name:           Brook Zero
   url:            http://brookzero.com
 
-paginate:         99
+paginate:         1
 
 # Custom vars
 version:          1
