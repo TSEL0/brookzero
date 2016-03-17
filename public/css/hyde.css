@@ -30,7 +30,7 @@
  *
  * Update the foundational and global aspects of the page.
  */
-
+* {font-family: 黑体;}
 html {
   font-family: "Georgia", Helvetica, Arial, sans-serif;
 }
