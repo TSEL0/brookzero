@@ -1,6 +1,6 @@
 ---
-layout:post
-title:Hello world!!!
+layout: post
+title: Hello world!!!
 ---
 ## test
 ### test
