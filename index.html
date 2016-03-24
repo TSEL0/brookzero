@@ -1,37 +1,75 @@
 ---
 layout: default
-title: Home
+title: Mainpage
 ---
+<!-- Content
+    ================================================== -->
+  <div class="top-strip"></div>
+  <div class="content">
+    <main class="container">
+    	<div class="row-fluid">
+    		<section class="content">
+    		  <h1>Ipsum List</h1>
+    		</section>
+    		<ul class="entries">
+    		{% for post in paginator.posts %}
+    		  <li>
+    		    <a href="{{ post.url }}">
+                      <span>{{ post.date | date: "%d %B %Y" }}</span>
+    		        <h3>{{ post.title }}</h3>
+                      <div>{{ post.content |truncatehtml | truncatewords: 30 }}</div>
+    		    </a>
+    		  </li>
+    		{% endfor %}
+    		</ul>
+    	</div>
+      <hr>
+      <div id="post-pagination">
+        {% if paginator.previous_page %}
+        <p class="prev">
+          {% if paginator.previous_page == 1 %}
+          <a href="/">Previous</a>
+          {% else %}
+          <a href="/page{{paginator.previous_page}}"> Previous</a>
+          {% endif %}
+        </p>
+        {% else %}
+<!--         <p class="prev disabled">
+          <span>Previous</span>
+        </p> -->
+        {% endif %}
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+        <ul class="pages">
+          <li class="page">
+            {% if paginator.page == 1 %}
+<!--             <span class="current-page">1</span> -->
+            {% else %}
+            <a href="/">1</a>
+            {% endif %}
+          </li>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+          {% for count in (2..paginator.total_pages) %}
+          <li class="page">
+            {% if count == paginator.page %}
+            <span class="current-page">{{count}}</span>
+            {% else %}
+            <a href="/page{{count}}">{{count}}</a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
 
-    {{ post.content }}
+        {% if paginator.next_page %}
+        <p class="next">
+          <a href="/page{{paginator.next_page}}">Next</a>
+        </p>
+        {% else %}
+<!--         <p class="next disabled">
+          <span>Next</span>
+        </p> -->
+        {% endif %}
+      </div>
+
+    </main>
   </div>
-  {% endfor %}
-</div>
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">翻到前一页</a>
-  {% else %}
-    <span class="pagination-item older">没有前一页</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">翻过这一页</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">翻过这一页</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">:)</span>
-  {% endif %}
-</div>

@@ -1,30 +1,7 @@
-# Dependencies
-pygments:         true
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
-# Permalinks
-permalink:        pretty
+auto: true # automatically update your jekyll
+server: true # runs a local server
+paginate: 999 # pagination basted on number of posts
+exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss'] # files to exclude
 
-# Setup
-# Dependencies
-pygments:         true
-
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            泽洛
-tagline:          ']'
-description:      'Alias Brook Zero.'
-url:              http://hyde.getpoole.com
-
-author:
-  name:           Brook Zero
-  url:            http://brookzero.com
-
-paginate:         1
-
-# Custom vars
-version:          1
-
-github:
-  repo:           https://github.com/brookzero
