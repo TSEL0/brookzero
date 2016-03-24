@@ -1,10 +1,10 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
+title:       Brook Zero|泽洛
+email:       me@brookzero.com
+author:      Brook Zero
 description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "http://brookzero.com"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -36,7 +36,7 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username:brookzero
 bitbucket_username:
 stackoverflow_id:
 twitter_username:
@@ -65,8 +65,8 @@ share_hackernews: false
 
 text:
   pagination:
-    newer: 'Newer'
-    older: 'Older'
+    newer: '翻到前一页'
+    older: '翻过这一页'
   share_buttons:
     text:         'Share this post!'
     facebook:     'Share on Facebook'
@@ -85,7 +85,7 @@ text:
   index:
     coming_soon: 'Coming soon...'
   contact:
-    email:    'Email Address'
+    email:    'me@brookzero.com'
     content:  'What would you like to say?'
     subject:  'New submission!'
     submit:   'Say Hello'
@@ -101,7 +101,7 @@ markdown:     kramdown
 redcarpet:
   extensions: ['smart', 'tables', 'with_toc_data']
 permalink:    pretty
-paginate:     4
+paginate:     1
 sass:
   compressed: true
 gems:
