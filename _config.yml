@@ -1,8 +1,8 @@
 # Site settings
-title:       Brook Zero|泽洛
+title:       Brook Zéro|泽洛
 email:       me@brookzero.com
 author:      Brook Zero
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+description: ""
 baseurl:     ""
 url:         "http://brookzero.com"
 date_format: "%b %-d, %Y"
