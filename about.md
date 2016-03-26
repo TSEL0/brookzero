@@ -5,6 +5,3 @@ permalink: /about/
 tags: about
 ---
 
-# 关于我
-
-啊, 泽洛...
