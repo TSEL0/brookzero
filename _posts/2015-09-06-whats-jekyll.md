@@ -7,19 +7,19 @@ title: iOS 代理为啥要用weak修饰?
 
 ---
 
-# 在开发项目中，会有这样变态的需求： #
+## 在开发项目中，会有这样的需求： ##
 
 * 推送：根据服务端推送过来的数据规则，跳转到对应的控制器
 * feeds列表：不同类似的cell，可能跳转不同的控制器（嘘！产品经理是这样要求：我也不确定会跳转哪个界面哦，可能是这个又可能是那个，能给我做灵活吗？根据后台返回规则任意跳转？）
 
-# 实现 #
+## 实现 ##
 
 利用runtime动态生成对象、属性、方法这特性，我们可以先跟服务端商量好，定义跳转规则，比如要跳转到A控制器，需要传属性id、type，那么服务端返回字典给我，里面有控制器名，两个属性名跟属性值，客户端就可以根据控制器名生成对象，再用kvc给对象赋值，这样就搞定了.
 
 比如：根据推送规则跳转对应界面HSFeedsViewController
 
 HSFeedsViewController.h：
-{% highlight c %}
+{% highlight objective-c %}
 @interface HSFeedsViewController : UIViewController
 
 // 注：根据下面的两个属性，可以从服务器获取对应的频道列表数据
@@ -34,15 +34,15 @@ HSFeedsViewController.h：
 {% endhighlight %}
 
 AppDelegate.m：
-{% highlight c %}
+{% highlight objective-c %}
 // 这个规则肯定事先跟服务端沟通好，跳转对应的界面需要对应的参数
 NSDictionary *userInfo = @{
-                           @"class": @"HSFeedsViewController",
-                           @"property": @{
-                                        @"ID": @"123",
-                                        @"type": @"12"
-                                   }
-                           };
+     @"class": @"HSFeedsViewController",
+     @"property": @{
+          @"ID": @"123",
+          @"type": @"12"
+    }
+};
 {% endhighlight %}
 
 * 接收推送消息
